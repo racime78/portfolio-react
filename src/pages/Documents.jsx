@@ -1,16 +1,24 @@
+import cvPDF from '../assets/cv-racime.pdf';
+import lettrePDF from '../assets/lettre-recommandation.pdf';
+import './Documents.css';
+
 export default function Documents() {
-    return (
-      <div style={{ padding: "2rem" }}>
-        <h2>Documents Téléchargeables</h2>
-        <ul>
-          <li>
-            <a href="/documents/Racime CV 2025 - Alternance Informatique" target="_blank" rel="noopener noreferrer">
-              📄 Télécharger mon CV
-            </a>
-          </li>
-          {/* Ajouter plus tard : lettre de motivation, attestations, etc. */}
-        </ul>
+  return (
+    <div className="documents-container">
+      <h1>Mes Documents</h1>
+      <div className="documents-grid">
+        <div className="document-card">
+          <h3>📄 Curriculum Vitae</h3>
+          <iframe src={cvPDF} title="CV" className="document-preview" />
+          <a href={cvPDF} download className="download-button">Télécharger le CV</a>
+        </div>
+
+        <div className="document-card">
+          <h3>📄 Lettre de recommandation</h3>
+          <iframe src={lettrePDF} title="Lettre de recommandation" className="document-preview" />
+          <a href={lettrePDF} download className="download-button">Télécharger la lettre</a>
+        </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
