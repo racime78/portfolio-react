@@ -1,29 +1,69 @@
+import { useState } from 'react';
+import './Competence.css';
+
+const categories = [
+  {
+    title: 'Langages',
+    items: ['HTML', 'CSS', 'JavaScript/React', 'PHP', 'Python', 'Java', 'C', 'C++', 'SQL', 'VBA'],
+  },
+  {
+    title: 'Outils & Environnements',
+    items: ['Node.js', 'MySQL', 'phpMyAdmin', 'CMS (WordPress, Webflow)', 'Office', 'Feedly', 'Looker Studio'],
+  },
+  {
+    title: 'Soft Skills',
+    items: ['Autonomie', 'Proactivité', 'Aisance orale', 'Rigueur', 'Travail en équipe'],
+  },
+  {
+    title: 'SEO & Analyse',
+    items: ['Google Analytics', 'SEMrush', 'Optimisation SEO', 'Analyse de performance'],
+  },
+  {
+    title: 'Langues',
+    items: ['Français (natif)', 'Anglais (B2)', 'Arabe (A1-A2)'],
+  },
+  {
+    title: 'En cours d’acquisition',
+    items: [
+      'C#',
+      'Intelligence Artificielle & Machine Learning',
+      'Internet des objets',
+      'Robot mobile autonome',
+      'Traitement d’image',
+      'Modélisation 3D',
+    ],
+  },
+];
+
 export default function Competence() {
-    return (
-      <div style={{ padding: "2rem" }}>
-        <h2>Compétences Techniques</h2>
-  
-        <h3>Langages</h3>
-        <p>HTML, CSS, JavaScript/React, PHP, Python, Java, C, C++, SQL, VBA</p>
-  
-        <h3>Outils & Environnements</h3>
-        <p>Node.js, MySQL, phpMyAdmin, CMS (WordPress, Webflow), Office, Feedly, Looker Studio</p>
-  
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Autonomie</li>
-          <li>Proactivité</li>
-          <li>Aisance orale</li>
-          <li>Rigueur</li>
-          <li>Travail en équipe</li>
-        </ul>
-  
-        <h3>SEO & Analyse</h3>
-        <p>Google Analytics, SEMrush, optimisation SEO, analyse de performance</p>
-  
-        <h3>Langues</h3>
-        <p>Français (natif), Anglais (B2), Arabe (A1-A2)</p>
+  const [openStates, setOpenStates] = useState(Array(categories.length).fill(false));
+
+  const toggle = (index) => {
+    const newStates = [...openStates];
+    newStates[index] = !newStates[index];
+    setOpenStates(newStates);
+  };
+
+  return (
+    <div className="competence-container">
+      <h2 className="competence-title">Compétences Techniques</h2>
+      <div className="competence-grid">
+        {categories.map((cat, index) => (
+          <div key={index} className="competence-card">
+            <button className="competence-header" onClick={() => toggle(index)}>
+              {cat.title}
+              <span className={`arrow ${openStates[index] ? 'open' : ''}`}>▼</span>
+            </button>
+            <div className={`competence-collapse ${openStates[index] ? 'expanded' : ''}`}>
+              <ul className="competence-list">
+                {cat.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
