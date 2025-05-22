@@ -36,7 +36,8 @@ const categories = [
 ];
 
 export default function Competence() {
-  const [openStates, setOpenStates] = useState(Array(categories.length).fill(false));
+  // ✅ initialisé avec tous les blocs ouverts
+  const [openStates, setOpenStates] = useState(Array(categories.length).fill(true));
 
   const toggle = (index) => {
     const newStates = [...openStates];
