@@ -1,9 +1,8 @@
 import ValueCard from '../components/ValueCard';
 //import HobbyGrid from '../components/HobbyGrid';
 import PassionCard from '../components/PassionCard';
-import musicImg from '../assets/music.png';
-import sportImg from '../assets/sport.png';
 import readingImg from '../assets/reading.webp';
+import mstImg from '../assets/mystere.jpg';
 import { FaMusic, FaDumbbell, FaBook } from 'react-icons/fa';
 
 export default function Apropos() {
@@ -43,19 +42,19 @@ export default function Apropos() {
         }}
       >
         <PassionCard
-          backImage={musicImg}
+          backImage={mstImg}
           label="Musique"
           icon={<FaMusic />}
           description="J’écoute énormément de musique, tous styles confondus. Cela m’accompagne pendant mes phases de concentration ou de détente."
         />
         <PassionCard
-          backImage={sportImg}
+          backImage={mstImg}
           label="Sport"
           icon={<FaDumbbell />}
           description="Je fais du sport régulièrement. Cela m’aide à garder un bon équilibre, à rester motivé et à structurer mes journées."
         />
         <PassionCard
-          backImage={readingImg}
+          backImage={mstImg}
           label="Lecture"
           icon={<FaBook />}
           description="Je lis tout type de contenu : romans, mangas, BD… C’est une vraie source d’inspiration et de culture générale."

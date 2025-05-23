@@ -10,28 +10,39 @@ export default function TimelinePro() {
   const [progress, setProgress] = useState(0);
 
   const data = [
-    {
-      year: '2023 - 2024',
-      company: '3i School',
-      description: [
-        'Automatisation comptable via API Qonto + Python',
-        'Création et refonte de sites WordPress/Webflow',
-        'Animation de sessions sur l’IA',
-        'Chef de projet d’un agrégateur d’offres d’emploi',
-      ],
-      logo: logo3i,
-    },
-    {
-      year: '2023 et 2022 (4 mois)',
-      company: 'La Source Jeune',
-      description: [
-        'Tests QA sur application mobile',
-        'Refonte site web, optimisation SEO',
-        'Correction d’erreurs HTTP, chatbot client',
-      ],
-      logo: logoSource,
-    },
-  ];
+  {
+    year: '2023 - 2024',
+    company: '3i School',
+    description: [
+      'Automatisation comptable via API Qonto + Python (export, traitement CSV, archivage)',
+      'Création et refonte de sites avec WordPress, Webflow et Elementor',
+      'Animation de sessions sur l’intelligence artificielle générative (ChatGPT, Midjourney, Notion AI)',
+      'Chef de projet d’un agrégateur d’offres d’emploi (PHP + JS + API)',
+      'Mise en place de workflows automatisés (Zapier / Make)',
+      'Suivi d’équipe et gestion de backlog Agile (Trello, Notion)',
+      'Mise en conformité RGPD des formulaires et mentions légales',
+      'Intégration responsive (Flexbox, media queries)',
+      'Création de maquettes Figma et adaptation mobile',
+    ],
+    logo: logo3i,
+  },
+  {
+    year: '2023 et 2022 (4 mois)',
+    company: 'La Source Jeune',
+    description: [
+      'Recettage fonctionnel d’une application mobile (QA + checklist)',
+      'Optimisation SEO : amélioration balises meta, vitesse, sitemap',
+      'Refonte graphique du site sous WordPress (Elementor)',
+      'Correction d’erreurs HTTP (404, redirections), et bugs CSS',
+      'Ajout d’un chatbot client via Tidio et tests A/B des questions',
+      'Suivi du trafic via Google Analytics + Looker Studio',
+      'Mise en place de formulaires de contact dynamiques',
+      'Création de contenus (articles, pages de présentation)',
+    ],
+    logo: logoSource,
+  },
+];
+
 
   useEffect(() => {
     const handleScroll = () => {
