@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Competence.css';
+import '../css/Competence.css';
 
 const categories = [
   {

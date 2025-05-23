@@ -1,8 +1,9 @@
-import './Apropos.css';
 import ValueCard from '../components/ValueCard';
 import PassionCard from '../components/PassionCard';
 import mstImg from '../assets/mystere.jpg';
 import { FaMusic, FaDumbbell, FaBook } from 'react-icons/fa';
+import '../css/Apropos.css';
+
 
 export default function Apropos() {
   return (

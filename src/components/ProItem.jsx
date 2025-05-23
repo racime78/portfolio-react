@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import './Timeline.css';
+import '../css/Timeline.css';
 
 export default function ProItem({ year, company, description, logo }) {
   const { ref, inView } = useInView({

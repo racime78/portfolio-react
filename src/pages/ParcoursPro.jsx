@@ -1,5 +1,5 @@
 import TimelinePro from '../components/TimelinePro';
-import '../components/Timeline.css';
+import '../css/Timeline.css';
 
 export default function ParcoursPro() {
   return (

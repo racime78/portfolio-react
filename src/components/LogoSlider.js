@@ -1,4 +1,4 @@
-import './LogoSlider.css';
+import '../css/LogoSlider.css';
 import logo1 from '../assets/logo-3i.png';
 import logo2 from '../assets/logo-certiflab.png';
 import logo3 from '../assets/logo-kebchi.png';

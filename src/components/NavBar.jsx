@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logo_Racime_V3-sf.png';
-import './NavBar.css';
+import '../css/NavBar.css';
 
 export default function NavBar() {
   return (

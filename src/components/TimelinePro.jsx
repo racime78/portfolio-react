@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import ProItem from './ProItem';
-import './Timeline.css';
+import '../css/Timeline.css';
 
 import logo3i from '../assets/3i-project.svg';
 import logoSource from '../assets/lasource.jpeg';

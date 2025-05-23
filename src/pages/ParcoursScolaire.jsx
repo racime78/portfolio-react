@@ -1,5 +1,5 @@
 import Timeline from '../components/Timeline';
-import '../components/Timeline.css';
+import '../css/Timeline.css';
 
 export default function ParcoursScolaire() {
   return (

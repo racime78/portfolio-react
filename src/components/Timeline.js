@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import TimelineItem from './TimelineItem';
-import './Timeline.css';
+import '../css/Timeline.css';
 
 import eicnamLogo from '../assets/eicnam.jpeg';
 import foucauldLogo from '../assets/charles_foucauld.png';

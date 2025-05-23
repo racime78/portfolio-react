@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../components/Projets.css';
+import '../css/Projets.css';
 
 import jobApp from '../assets/job-aggregator.jpg';
 import qontoApp from '../assets/qonto-automation.webp';

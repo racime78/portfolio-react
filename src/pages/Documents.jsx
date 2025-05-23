@@ -1,6 +1,6 @@
 import cvPDF from '../assets/cv-racime.pdf';
 import lettrePDF from '../assets/lettre-recommandation.pdf';
-import './Documents.css';
+import '../css/Documents.css';
 
 export default function Documents() {
   return (

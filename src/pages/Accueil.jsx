@@ -1,4 +1,4 @@
-import './Accueil.css';
+import '../css/Accueil.css';
 import LogoSlider from '../components/LogoSlider';
 // import portrait from '../assets/portrait.jpg';
 
