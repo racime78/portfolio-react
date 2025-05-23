@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './PassionCard.css'; // CSS séparé
 
 export default function PassionCard({ backImage, label, icon, description }) {
   const [flipped, setFlipped] = useState(false);
@@ -7,24 +6,22 @@ export default function PassionCard({ backImage, label, icon, description }) {
 
   const handleCardClick = () => {
     setFlipped(!flipped);
-    if (flipped) setShowDetails(false); // on referme les détails quand on retourne
+    if (flipped) setShowDetails(false);
   };
 
   const handleToggleDetails = (e) => {
-    e.stopPropagation(); // empêche le clic sur la carte de s'exécuter
+    e.stopPropagation();
     setShowDetails(!showDetails);
   };
 
   return (
-    <div className={`card ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-      <div className="card-inner">
-        {/* Face avant */}
-        <div className="card-front">
+    <div className={`passion-card ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+      <div className="passion-inner">
+        <div className="passion-front">
           <img src={backImage} alt="Passion visuelle" />
         </div>
 
-        {/* Face arrière */}
-        <div className="card-back">
+        <div className="passion-back">
           <div className="icon">{icon}</div>
           <h3>{label}</h3>
           <button onClick={handleToggleDetails}>

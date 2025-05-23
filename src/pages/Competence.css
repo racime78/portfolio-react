@@ -1,55 +1,72 @@
 .competence-container {
-  padding: 2rem;
-  max-width: 1000px;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  max-width: 1100px;
   margin: auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .competence-title {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #4a90e2;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #1c8755;
+  border-left: 6px solid #ead99a;
+  padding-left: 0.8rem;
+}
+
+.competence-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: #444;
+  font-size: 1.05rem;
 }
 
 .competence-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
-
 .competence-card {
-  flex: 1 1 300px;
-  max-width: 450px;
-  border: 1px solid #ddd;
+  background-color: #fefefe;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #ead99a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 450px;
 }
 
 .competence-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .competence-header {
-  width: 100%;
-  padding: 1rem;
+  background-color: #1c8755;
+  color: #ffffff;
+  padding: 1rem 1.2rem;
   font-size: 1.1rem;
-  font-weight: bold;
-  background: #4a90e2;
-  color: white;
+  font-weight: 600;
   border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 .arrow {
   transition: transform 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .arrow.open {
@@ -59,21 +76,23 @@
 .competence-collapse {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .competence-collapse.expanded {
-  max-height: 500px; /* assez pour contenir les listes */
+  max-height: 600px;
+  overflow: visible;
 }
 
 .competence-list {
-  list-style: disc;
   padding: 1rem 1.5rem;
-  background: white;
-  color: #4a90e2;
+  background: #ffffff;
+  color: #1c8755;
+  font-size: 0.95rem;
+  list-style: disc;
 }
 
 .competence-list li {
   margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  line-height: 1.5;
 }

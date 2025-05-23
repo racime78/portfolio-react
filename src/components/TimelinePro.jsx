@@ -44,25 +44,28 @@ export default function TimelinePro() {
 ];
 
 
-  useEffect(() => {
+ useEffect(() => {
     const handleScroll = () => {
-      const el = containerRef.current;
-      if (!el) return;
+      if (!containerRef.current) return;
 
-      const rect = el.getBoundingClientRect();
+      const timeline = containerRef.current;
+      const timelineTop = timeline.offsetTop;
+      const timelineHeight = timeline.offsetHeight;
+
+      const scrollY = window.scrollY || window.pageYOffset;
       const windowHeight = window.innerHeight;
-      const fullHeight = rect.height + windowHeight;
+      const windowBottom = scrollY + windowHeight;
 
-      const scrolled = Math.min(
-        Math.max(((windowHeight - rect.top) / fullHeight) * 100, 0),
-        100
-      );
+      const startOffset = 100;
 
-      setProgress(scrolled);
+      let progressRatio = (windowBottom - (timelineTop + startOffset)) / timelineHeight;
+      progressRatio = Math.min(Math.max(progressRatio, 0), 1);
+
+      setProgress(progressRatio * 100);
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // initial call
+    handleScroll(); // Initial calculation
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

@@ -1,0 +1,149 @@
+/* ========== CONTENEUR GLOBAL ========== */
+.apropos-container {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* ========== TITRE PRINCIPAL ========== */
+.apropos-title {
+  color: #1c8755;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ========== SECTIONS GÉNÉRALES ========== */
+.apropos-section {
+  margin-top: 2.5rem;
+}
+
+.apropos-section h2 {
+  color: #1c8755;
+  border-left: 5px solid #ead99a;
+  padding-left: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ========== VALUE CARD ========== */
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+@media (max-width: 600px) {
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.value-card {
+  border: 1px solid #ead99a;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 260px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.value-card h3 {
+  color: #1c8755;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ========== PASSION CARDS ========== */
+.passions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+
+.passion-card {
+  width: 100%;
+  max-width: 220px;
+  height: 340px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+
+.passion-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.passion-card.flipped .passion-inner {
+  transform: rotateY(180deg);
+}
+
+.passion-front,
+.passion-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.passion-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.passion-back {
+  background-color: #fdfdfd;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.passion-back h3 {
+  color: #1c8755;
+  margin-bottom: 0.3rem;
+}
+
+.passion-back .icon {
+  font-size: 2.5rem;
+  color: #1c8755;
+}
+
+.passion-back .details {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.passion-back button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #1c8755;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

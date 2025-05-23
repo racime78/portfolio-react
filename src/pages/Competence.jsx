@@ -36,7 +36,6 @@ const categories = [
 ];
 
 export default function Competence() {
-  // ✅ initialisé avec tous les blocs ouverts
   const [openStates, setOpenStates] = useState(Array(categories.length).fill(true));
 
   const toggle = (index) => {
@@ -48,6 +47,9 @@ export default function Competence() {
   return (
     <div className="competence-container">
       <h2 className="competence-title">Compétences Techniques</h2>
+      <p className="competence-intro">
+        Voici un aperçu structuré de mes savoir-faire techniques, outils maîtrisés, soft skills et compétences en cours d'acquisition.
+      </p>
       <div className="competence-grid">
         {categories.map((cat, index) => (
           <div key={index} className="competence-card">
