@@ -1,3 +1,4 @@
+/* ========== NAVBAR GLOBALE ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,16 +10,20 @@
   top: 0;
   z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
 }
 
+/* ========== LOGO ========== */
 .navbar-logo {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar-logo img {
-  height: 70px;
+  height: 60px;
 }
 
 .navbar-logo h1 {
@@ -27,12 +32,14 @@
   margin: 0;
 }
 
+/* ========== LIENS NAVIGATION ========== */
 .navbar-links {
   display: flex;
   gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: auto; /* Aligne complètement les liens à droite */
 }
 
 .navbar-links a {
@@ -49,7 +56,69 @@
   border-bottom: 2px solid #ead99a;
 }
 
-.navbar-logo {
-  text-decoration: none;
-  color: inherit;
+/* ✅ Bouton menu burger (caché sur desktop) */
+.burger-button {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #1c8755;
+  cursor: pointer;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.8rem;
+    margin-left: 0; /* Supprime l'effet desktop */
+  }
+
+  .navbar-links a {
+    font-size: 1.1rem;
+  }
+
+  .burger-button {
+    display: block;
+    margin-left: auto; /* Décale le bouton burger à droite */
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 }

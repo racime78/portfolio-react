@@ -9,7 +9,6 @@ import Projets from './pages/Projets';
 import Competence from './pages/Competence';
 import Documents from './pages/Documents';
 import Contact from './pages/Contact';
-import TestPage from './pages/test2'; // ⚠️ Vérifie que le fichier existe bien
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
         <Route path="/competence" element={<Competence />} />
         <Route path="/documents" element={<Documents />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<TestPage />} /> {/* ✅ Ajout de TestPage */}
       </Routes>
       <Footer />
     </Router>

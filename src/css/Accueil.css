@@ -1,6 +1,6 @@
 .accueil-container {
   background-color: #ffffff;
-  padding: 3rem 5vw;
+  padding: 2rem 5vw;
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
@@ -9,57 +9,56 @@
 }
 
 .accueil-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .accueil-avatar {
-  width: 160px;
+  width: 140px;
   border-radius: 50%;
   border: 4px solid #ead99a;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 1rem;
+  margin: 1rem auto 0;
+  display: block;
 }
 
 .accueil-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
 }
 
 .accueil-left {
-  flex: 1;
-  width: 50%; /* ✅ Assure que la partie gauche prend 50% */
-  background-color: #1c8755; /* ✅ Fond vert */
-  color: white; /* ✅ Texte en blanc */
+  background-color: #1c8755;
+  color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
 }
 
 .accueil-right {
-  flex: 1;
-  width: 50%; /* ✅ Assure que la partie droite prend 50% */
   text-align: left;
 }
 
-/* ✅ Ajustement du titre */
 .accueil-name {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #1c8755; /* ✅ Titre en vert */
+  color: #1c8755;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .accueil-section {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .accueil-section h2 {
   color: #1c8755;
-  border-left: 5px solid #ead99a;
+  border-left: 4px solid #ead99a;
   padding-left: 0.6rem;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .accueil-section ul {
@@ -81,26 +80,26 @@
 .accueil-footer {
   margin-top: 3rem;
   background: #ead99a;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  font-size: 0.95rem;
 }
 
 .accueil-sections-container {
   display: flex;
-  justify-content: space-between; /* ✅ Espacement uniforme entre les blocs */
-  gap: 20px; /* ✅ Espacement entre les blocs */
-  margin-bottom: 60px;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 40px;
 }
 
 .accueil-section {
-  flex: 1; /* ✅ Tous les blocs occupent une taille égale */
-  min-width: 300px; /* ✅ Évite que les blocs deviennent trop petits */
+  flex: 1 1 100%;
 }
 
 .accueil-distinction h2 {
   color: #1c8755;
-  border-left: 5px solid #ead99a;
+  border-left: 4px solid #ead99a;
   padding-left: 0.6rem;
   margin-bottom: 1rem;
 }
@@ -113,4 +112,32 @@
 
 .accueil-section a:hover {
   text-decoration: underline;
+}
+
+/* ✅ Responsive amélioration tablette et + */
+@media (min-width: 768px) {
+  .accueil-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .accueil-left,
+  .accueil-right {
+    flex: 1 1 50%;
+  }
+
+  .accueil-name {
+    text-align: left;
+  }
+
+  .accueil-sections-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .accueil-section {
+    flex: 1 1 300px;
+  }
 }

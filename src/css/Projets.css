@@ -1,3 +1,4 @@
+/* ========== CONTAINER GLOBAL ========== */
 .projets-slider-container {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -5,6 +6,7 @@
   background: #ffffff;
 }
 
+/* ========== TITRE ========== */
 .projets-title {
   text-align: center;
   color: #1c8755;
@@ -14,13 +16,13 @@
   padding-left: 0.8rem;
 }
 
-/* Centrage des slides */
+/* ========== SLIDES ========== */
 .slick-slide > div {
   display: flex !important;
   justify-content: center;
 }
 
-/* Slide projet */
+/* ========== SLIDE PROJET ========== */
 .projet-slide {
   width: 100%;
   max-width: 720px;
@@ -31,7 +33,7 @@
   align-items: center;
 }
 
-/* Image projet */
+/* ========== IMAGE PROJET ========== */
 .projet-image {
   width: 100%;
   height: 300px;
@@ -41,7 +43,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Carte projet */
+/* ========== CONTENU PROJET ========== */
 .projet-content {
   background: #fefefe;
   border-radius: 12px;
@@ -73,7 +75,7 @@
   color: #777;
 }
 
-/* Flèches de navigation */
+/* ========== FLÈCHES SLIDER ========== */
 .slick-prev,
 .slick-next {
   z-index: 2;
@@ -97,7 +99,7 @@
   right: 10px !important;
 }
 
-/* Bouton individuel */
+/* ========== BOUTONS ========== */
 .project-button {
   display: inline-block;
   margin-top: 1rem;
@@ -114,7 +116,6 @@
   background-color: #146843;
 }
 
-/* Bouton global GitHub */
 .github-global-button {
   text-align: center;
   margin-top: 3rem;
@@ -133,4 +134,45 @@
 
 .github-global-button a:hover {
   background-color: #146843;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .projet-slide {
+    padding: 1.5rem 1rem;
+  }
+
+  .projet-image {
+    height: 220px;
+  }
+
+  .projet-content {
+    padding: 1rem;
+  }
+
+  .projet-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .projet-content p,
+  .projet-content ul {
+    font-size: 0.95rem;
+  }
+
+  .project-button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .github-global-button a {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
 }
