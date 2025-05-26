@@ -11,10 +11,38 @@ export default function Apropos() {
       <h1 className="apropos-title">À propos de moi</h1>
 
       <p>
-        Je suis <strong>Racime Houhou</strong>, étudiant en cycle ingénieur à l’EICNAM Paris, passionné par le 
-        développement web, l’automatisation et les technologies innovantes. Mon parcours est marqué par la polyvalence, 
-        la curiosité et un fort engagement dans ce que je fais.
-      </p>
+  Je m’appelle <span className="accueil-highlight">Racime Houhou</span>, actuellement en <span className="accueil-highlight">cycle ingénieur</span> à l’EICNAM Paris. 
+  Mon parcours s’est construit autour d’une conviction simple : la <span className="accueil-highlight">technologie</span> n’a de valeur que 
+  lorsqu’elle <span className="accueil-highlight">résout un problème réel</span>, <span className="accueil-highlight">améliore l’expérience humaine</span> ou <span className="accueil-highlight">facilite un processus complexe</span>.
+</p>
+
+<p>
+  Au fil de mes <span className="accueil-highlight">études</span> et <span className="accueil-highlight">expériences</span>, j’ai appris bien plus que des langages de programmation. 
+  J’ai appris à <span className="accueil-highlight">m’adapter</span>, à <span className="accueil-highlight">structurer mes idées</span>, à <span className="accueil-highlight">travailler en équipe</span>, 
+  et surtout à <span className="accueil-highlight">transformer des besoins fonctionnels en solutions concrètes</span>.
+</p>
+
+<p>
+  Ce que j’aime par-dessus tout, c’est <span className="accueil-highlight">comprendre comment les choses fonctionnent</span>, 
+  <span className="accueil-highlight">déconstruire un problème</span>, et le <span className="accueil-highlight">reconstruire avec méthode et créativité</span>. 
+  C’est ce qui me pousse à explorer sans cesse de <span className="accueil-highlight">nouveaux domaines</span> : 
+  du <span className="accueil-highlight">développement web</span> à <span className="accueil-highlight">l’automatisation</span>, 
+  en passant par la <span className="accueil-highlight">gestion de projet</span> et <span className="accueil-highlight">l’analyse de données</span>.
+</p>
+
+<p>
+  Mon profil se veut volontairement <span className="accueil-highlight">hybride</span> : 
+  <span className="accueil-highlight"> rigoureux techniquement</span>, <span className="accueil-highlight">curieux par nature</span>, 
+  et animé par l’envie de <span className="accueil-highlight">bien faire</span>. 
+  J'accorde une grande importance à la <span className="accueil-highlight">communication</span> et à <span className="accueil-highlight">l’écoute</span>, 
+  convaincu qu’un bon projet est avant tout une affaire de <span className="accueil-highlight">collaboration</span>.
+</p>
+
+<p>
+  Que ce soit à travers un <span className="accueil-highlight">site web</span>, une <span className="accueil-highlight">API</span> ou une <span className="accueil-highlight">interface utilisateur</span>, 
+  mon objectif reste le même : <span className="accueil-highlight">créer des solutions utiles, bien pensées et durables</span>.
+</p>
+
 
       <div className="apropos-section">
         <h2>🎯 Mes valeurs</h2>
