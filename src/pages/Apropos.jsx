@@ -4,8 +4,27 @@ import mstImg from '../assets/mystere.jpg';
 import { FaMusic, FaDumbbell, FaBook } from 'react-icons/fa';
 import '../css/Apropos.css';
 
+const GA_ID = 'G-T744FMLRYS';
 
 export default function Apropos() {
+
+ useEffect(() => {
+    if (GA_ID) {
+      // Injecte dynamiquement le script Google Analytics
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      };
+    }
+  }, []);
+
   return (
     <div className="apropos-container">
       <h1 className="apropos-title">À propos de moi</h1>

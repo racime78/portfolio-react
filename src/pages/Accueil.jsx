@@ -3,7 +3,27 @@ import LogoSlider from '../components/LogoSlider';
 import portrait from '../assets/portrait.png';
 import { Link } from 'react-router-dom';
 
+const GA_ID = 'G-T744FMLRYS';
+
 export default function Accueil() {
+
+  useEffect(() => {
+    if (GA_ID) {
+      // Injecte dynamiquement le script Google Analytics
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      };
+    }
+  }, []);
+
   return (
     <div className="accueil-container">
       <div className="accueil-content">
