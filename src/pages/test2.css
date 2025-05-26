@@ -1,0 +1,48 @@
+
+.test-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-side {
+  width: 40%;
+  background-color: #1c8755;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative; /* ✅ Assure que l’image peut se repositionner */
+  overflow: visible; /* ✅ Autorise le débordement sur right-side */
+}
+
+.portrait {
+  width: 130%; /* ✅ Toujours agrandie pour qu’elle déborde */
+  max-height: 80%;
+  object-fit: cover;
+  position: absolute;
+  left: -5%; /* ✅ Colle l’image encore plus à gauche */
+}
+
+
+
+.right-side {
+  width: 60%;
+  background-color: #ead99a; /* Fond vert */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #fff; /* Texte en blanc */
+  position: absolute; /* Permet de superposer */
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Le texte s'étend sur toute la largeur */
+  text-align: center;
+}
+
