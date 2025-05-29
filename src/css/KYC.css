@@ -1,11 +1,110 @@
 .kyc-container {
-  padding: 3rem 5vw;
-  text-align: center;
+  background-color: #ffffff;
+  padding: 2rem 5vw;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+.kyc-title {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  text-align: center;
+  color: #1c8755 
+}
+
+.kyc-description {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.kyc-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.kyc-left {
+  background-color: #1c8755; /* ✅ Fond vert */
+  color: white; /* ✅ Texte blanc */
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.kyc-right {
+  text-align: left;
+}
+
+.kyc-section {
+  margin-top: 2rem;
+}
+
+.kyc-section h2 {
+  color: #1c8755;
+  border-left: 4px solid #ead99a; /* ✅ Bordure jaune */
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.kyc-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.kyc-section li::before {
+  content: "✔️";
+  margin-right: 0.6rem;
+  color: #1c8755;
+}
+
+.kyc-highlight {
+  font-weight: bold;
+  color: #1c8755;
+}
+
+.kyc-footer {
+  margin-top: 3rem;
+  background: #ead99a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ✅ Ajout du style pour l'iframe */
 .kyc-iframe {
   width: 100%;
   height: 700px;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ead99a; /* ✅ Bordure jaune */
+}
+
+/* ✅ Responsive amélioration tablette et + */
+@media (min-width: 768px) {
+  .kyc-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .kyc-left,
+  .kyc-right {
+    flex: 1 1 50%;
+  }
+
+  .kyc-sections-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .kyc-section {
+    flex: 1 1 300px;
+  }
 }
