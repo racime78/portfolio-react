@@ -100,6 +100,11 @@
 }
 
 /* ========== BOUTONS ========== */
+.button-container {
+  display: flex;
+  gap: 12px; /* ✅ Espacement entre les boutons */
+}
+
 .project-button {
   display: inline-block;
   margin-top: 1rem;
@@ -114,6 +119,15 @@
 
 .project-button:hover {
   background-color: #146843;
+}
+
+/* ✅ Style du bouton "Visualiser le projet" */
+.project-view-button {
+  background-color: #ead99a; /* ✅ Bleu pour différencier */
+}
+
+.project-view-button:hover {
+  background-color: #ead99a;
 }
 
 .github-global-button {

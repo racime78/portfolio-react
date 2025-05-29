@@ -7,6 +7,8 @@ import jobApp from '../assets/job-aggregator.jpg';
 import qontoApp from '../assets/qonto-automation.webp';
 import appliBlog from '../assets/appliblog.jpg';
 import portfolioScreenshot from '../assets/Logo_Racime.png';
+import KYC from '../assets/kyc.png';
+
 
 const projets = [
   {
@@ -43,7 +45,16 @@ const projets = [
       "Aperçu PDF pour CV & lettres"
     ],
     link: "https://github.com/racime78/portfolio-react"
-  }
+  },
+  {
+    image: KYC,
+    title: "KYC Risk Checker (prototype réalisé en 2h30)",
+    description:
+      "Application web permettant d’évaluer le niveau de risque KYC des transactions financières.",
+    link: "https://github.com/racime78/kyc-risk-checker",
+    viewLink: "/kyc"
+}
+
 ];
 
 export default function Projets() {
@@ -75,16 +86,28 @@ export default function Projets() {
                   ))}
                 </ul>
               )}
-              {projet.link && (
-                <a
-                  href={projet.link}
-                  className="project-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Accéder au code
-                </a>
-              )}
+              <div className="button-container">
+                {projet.link && (
+                  <a
+                    href={projet.link}
+                    className="project-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Voir le code
+                  </a>
+                )}
+                {projet.viewLink && (
+                  <a
+                    href={projet.viewLink}
+                    className="project-button project-view-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visualiser le projet
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

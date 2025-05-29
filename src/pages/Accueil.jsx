@@ -2,6 +2,8 @@ import '../css/Accueil.css';
 import LogoSlider from '../components/LogoSlider';
 import portrait from '../assets/portrait.png';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 const GA_ID = 'G-T744FMLRYS';
 
@@ -16,11 +18,12 @@ export default function Accueil() {
       document.head.appendChild(script);
 
       script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-      };
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+};
+
     }
   }, []);
 

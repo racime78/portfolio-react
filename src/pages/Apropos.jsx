@@ -2,6 +2,8 @@ import ValueCard from '../components/ValueCard';
 import PassionCard from '../components/PassionCard';
 import mstImg from '../assets/mystere.jpg';
 import { FaMusic, FaDumbbell, FaBook } from 'react-icons/fa';
+import { useEffect } from 'react';
+
 import '../css/Apropos.css';
 
 const GA_ID = 'G-T744FMLRYS';
@@ -16,12 +18,12 @@ export default function Apropos() {
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
       document.head.appendChild(script);
 
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-      };
+     script.onload = () => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+};
     }
   }, []);
 
