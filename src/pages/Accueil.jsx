@@ -1,6 +1,6 @@
 import '../css/Accueil.css';
 import LogoSlider from '../components/LogoSlider';
-import portrait from '../assets/portrait.png';
+import portrait from '../assets/portrait.jpg';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
